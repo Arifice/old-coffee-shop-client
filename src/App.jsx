@@ -1,4 +1,4 @@
-import {  useLoaderData } from "react-router-dom"
+import { useLoaderData } from "react-router-dom"
 import Coffeecard from "./Components/Coffeecard";
 import { useState } from "react";
 
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-           
+         
       <h1 className="text-5xl text-[#331A15] font-rancho text-center my-12">Our Popular Products</h1>
       <div className="grid grid-cols-2 gap-8">
         {

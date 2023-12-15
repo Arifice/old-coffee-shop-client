@@ -14,11 +14,12 @@ const UpdateCoffee = () => {
         const category=form.category.value;
         const details=form.details.value;
         const photo=form.photo.value;
-        const updatedCoffee={name,quantity,supplier,taste,category,details,photo};
+        const price=form.price.value;
+        const updatedCoffee={name,quantity,supplier,taste,category,details,photo,price};
         console.log(updatedCoffee);
 
         // send to server
-        fetch(`http://localhost:5000/coffee/${_id}`,{
+        fetch(` https://old-coffee-shop-server.vercel.app/coffee/${_id}`,{
             method: 'PUT',
             headers: {
                 'content-type':'application/json',
@@ -97,7 +98,7 @@ const UpdateCoffee = () => {
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
-                        <input type="text" name="price" defaultValue={price} placeholder="Enter coffee details" className="input input-bordered w-[436px] h-[48px]"  />               
+                        <input type="text" name="price" defaultValue={price} placeholder="price" className="input input-bordered w-[436px] h-[48px]"  />               
                     </div>
                     <div className="form-control ">
                             <label className="label">

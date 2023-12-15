@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Coffeecard = ({coffee,coffees,setCoffees}) => {
-    const {_id,name,quantity,supplier,taste,category,details,photo}=coffee;
+    const {_id,name,quantity,supplier,taste,category,details,photo,price}=coffee;
     const handleDelete=_id=>{
         console.log(_id);
         Swal.fire({
@@ -16,7 +16,7 @@ const Coffeecard = ({coffee,coffees,setCoffees}) => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {              
-              fetch(`http://localhost:5000/coffee/${_id}`,{
+              fetch(` https://old-coffee-shop-server.vercel.app/coffee/${_id}`,{
                 method:'DELETE'
                 
               })
@@ -37,7 +37,7 @@ const Coffeecard = ({coffee,coffees,setCoffees}) => {
           });
     }
     return (
-        <div className="card card-side bg-base-100 shadow-xl bg-[#F5F4F1]">
+        <div className="card card-side  shadow-xl bg-[#F5F4F1]">
                 <figure><img src={photo} alt="Movie"/></figure>                
                     <div className="card-body">
                         <h2 className="card-title">Name: {name}</h2>
@@ -48,6 +48,7 @@ const Coffeecard = ({coffee,coffees,setCoffees}) => {
                                 <p>Quantity: {quantity}</p>
                                 <p>supplier: {supplier}</p>
                                 <p>Details: {details}</p>   
+                                <p>Price: {price}</p>   
                             </div>   
                             <div className="join join-vertical space-y-2">
                                 <button className="btn btn-secondary btn-outline">View</button>

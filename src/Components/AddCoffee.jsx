@@ -10,11 +10,12 @@ const AddCoffee = () => {
         const category=form.category.value;
         const details=form.details.value;
         const photo=form.photo.value;
-        const newCoffee={name,quantity,supplier,taste,category,details,photo};
+        const price=form.price.value;
+        const newCoffee={name,quantity,supplier,taste,category,details,photo,price};
         console.log(newCoffee);
 
         // send to server
-        fetch('http://localhost:5000/coffee',{
+        fetch(' https://old-coffee-shop-server.vercel.app/coffee',{
             method: 'POST',
             headers: {
                 'content-type':'application/json',
@@ -24,14 +25,12 @@ const AddCoffee = () => {
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
-            if(data.modifiCount>0){
-                Swal.fire({
-                    icon: "success",
-                    title: "Success",
-                    text: "coffee added successfully",
-                    
-                  });
-            }
+            Swal.fire({
+                icon: "success",
+                title: "Success",
+                text: "coffee added successfully",
+                
+              });
         })
 
     }
@@ -90,7 +89,7 @@ const AddCoffee = () => {
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
-                        <input type="text" name="price" placeholder="Enter coffee details" className="input input-bordered w-full"  />               
+                        <input type="text" name="price" placeholder="price" className="input input-bordered w-full"  />               
                     </div>
                     <div className="w-full ">
                             <label className="label">
