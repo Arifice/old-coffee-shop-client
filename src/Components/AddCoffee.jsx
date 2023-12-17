@@ -37,9 +37,9 @@ const AddCoffee = () => {
     return (
         <div className="bg-[#F4F3F0] p-8 border-r-4 ">
             <h1 className="text-5xl font-rancho text-[#374151] text-center ">Add New Coffee</h1>
-            <p className="text-center mx-36 font-raleway my-10">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
+            <p className="lg:text-center text-justify text-sm lg:mx-36 font-raleway my-6 lg:my-10">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
             <form onSubmit={handleAddCoffee} className="">
-               <div className="flex gap-8 justify-center">
+               <div className="flex gap-3 lg:gap-8 justify-center">
                     <div className="w-full">
                         <label className="label">
                             <span className="label-text">Name</span>
@@ -54,7 +54,7 @@ const AddCoffee = () => {
                         <input type="text" name="quantity" placeholder="Enter quantity" className="input input-bordered w-full"  />       
                    </div>
                 </div>
-               <div className="flex gap-8 justify-center">
+               <div className="flex gap-3 lg:gap-8 justify-center">
                     <div className="w-full">
                         <label className="label">
                             <span className="label-text">Supplier</span>
@@ -69,7 +69,7 @@ const AddCoffee = () => {
                         <input type="text" name="taste" placeholder="Enter coffee taste" className="input input-bordered w-full"  />  
                    </div>
                 </div>
-               <div className="flex gap-8 justify-center">
+               <div className="flex gap-3 lg:gap-8 justify-center">
                     <div className="w-full">
                         <label className="label">
                             <span className="label-text">Category</span>
@@ -84,7 +84,7 @@ const AddCoffee = () => {
                         <input type="text" name="details" placeholder="Enter coffee details" className="input input-bordered w-full"  />               
                     </div>
                 </div>
-                <div className="flex gap-8 justify-center">
+                <div className="flex gap-3 lg:gap-8 justify-center">
                     <div className="w-full">
                         <label className="label">
                             <span className="label-text">Price</span>
@@ -100,7 +100,7 @@ const AddCoffee = () => {
                 </div>                
                 
                 <div className="flex justify-center">
-                    <div className="w-full mt-10 ">
+                    <div className="w-full mt-5 lg:mt-10 ">
                             
                             <input type="submit" value='Add Coffee'   className=" btn input input-bordered w-full bg-[#D2B48C] "  />               
                     </div>
