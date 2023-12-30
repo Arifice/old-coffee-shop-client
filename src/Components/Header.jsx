@@ -12,7 +12,12 @@ const Header = () => {
           
         </>
     return (
-        <div className="flex justify-between bg-purple-600 py-4">
+      <div>
+        <img className="w-full h-40" src="https://i.postimg.cc/KvqgjynS/header-coffeeequipment.webp" alt="" />
+        <div>
+
+        </div>
+          <div className="flex justify-between bg-purple-600 py-4">
           <div className="">
             <div className="dropdown">
               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,7 +36,10 @@ const Header = () => {
             </ul>
           </div>
           
-        </div>
+          </div>
+      </div>
+
+       
     );
 };
 
