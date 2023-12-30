@@ -41,7 +41,7 @@ const Coffeecard = ({coffee,coffees,setCoffees}) => {
                 <figure><img src={photo} alt="Movie"/></figure>                
                     <div className="card-body">
                         <h2 className="card-title">Name: {name}</h2>
-                        <div className="lg:flex  flex-col lg:justify-between">
+                        <div className="flex lg:flex-row  flex-col lg:justify-between">
                             <div className="space-y-2">
                                 <p>Category: {category}</p>
                                 <p>Taste: {taste}</p>
